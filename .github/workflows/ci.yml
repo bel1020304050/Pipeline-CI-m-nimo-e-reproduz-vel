@@ -1,1 +1,29 @@
+name: Pipeline CI
 
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build e testes
+        run: mvn clean verify
+
+      - name: Gerar artefato JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: aplicacao-biblioteca
+          path: target/*.jar
