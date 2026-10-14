@@ -22,8 +22,13 @@ jobs:
       - name: Build e testes
         run: mvn clean verify
 
+      # NOVO: lê o nome da aplicação direto do pom.xml (<artifactId>)
+      - name: Obter nome da aplicação
+        run: echo "APP_NAME=$(mvn -B -q -DforceStdout help:evaluate -Dexpression=project.artifactId)" >> "$GITHUB_ENV"
+
       - name: Enviar artefato JAR
         uses: actions/upload-artifact@v4
         with:
-          name: aplicacao-biblioteca-${{ github.sha }}
+          # ALTERADO: nome da aplicação + commit
+          name: ${{ env.APP_NAME }}-${{ github.sha }}
           path: target/*.jar
