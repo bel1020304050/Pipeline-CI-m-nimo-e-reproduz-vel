@@ -8,6 +8,6 @@ public class MainTest {
     void deveRetornarMensagemDaBiblioteca() {
         String mensagem = "Aplicação Biblioteca funcionando!";
 
-        assertEquals("Erro Teste Biblioteca funcionando", mensagem);
+        assertEquals("Sucesso Teste Biblioteca funcionando", mensagem);
     }
 }
