@@ -14,9 +14,6 @@ O pipeline é repetível a partir do repositório e automatiza: checkout do cód
 ├── src/
 │   ├── main/java/Main.java         # código da aplicação
 │   └── test/java/MainTest.java     # teste automatizado (JUnit 5)
-├── docs/                           # prints das execuções (evidências)
-│   ├── evidencia-sucesso.png
-│   └── evidencia-falha.png
 ├── pom.xml                         # configuração do Maven e dependências
 └── README.md
 ```
@@ -66,7 +63,7 @@ O pipeline foi executado com sucesso (execução **#28**, commit `a6d3e59`, gati
 - Duração total: 22s
 - Artefatos gerados: **1**
 
-![Execução #28 do Pipeline CI com sucesso](docs/evidencia-sucesso.png)
+<img width="1894" height="644" alt="image" src="https://github.com/user-attachments/assets/f51faf3e-ce3e-49cb-82d7-7796788a2818" />
 
 ## 8. Evidência de falha detectada
 
@@ -76,7 +73,7 @@ Para demonstrar que o pipeline detecta falhas, foi feita uma alteração proposi
 - Job `build`: falhou (`Process completed with exit code 1`)
 - Artefatos gerados: **nenhum**
 
-![Execução #26 do Pipeline CI com falha](docs/evidencia-falha.png)
+<img width="1889" height="822" alt="image" src="https://github.com/user-attachments/assets/f818fadb-be13-4eeb-997b-3d00d21584fb" />
 
 ## 9. Como reproduzir
 
