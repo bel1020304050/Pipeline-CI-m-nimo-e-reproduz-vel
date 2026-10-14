@@ -1,4 +1,4 @@
-# Pipeline CI Mínimo e Reproduzível
+# Pipeline CI Mínimo e Reproduzível.
 
 ## 1. Objetivo
 
