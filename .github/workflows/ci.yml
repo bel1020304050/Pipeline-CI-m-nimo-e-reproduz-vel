@@ -25,5 +25,5 @@ jobs:
       - name: Enviar artefato JAR
         uses: actions/upload-artifact@v4
         with:
-          name: aplicacao-biblioteca
+          name: aplicacao-biblioteca-${{ github.sha }}
           path: target/*.jar
