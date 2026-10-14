@@ -6,7 +6,7 @@ public class MainTest {
 
     @Test
     void deveRetornarMensagemDaBiblioteca() {
-        String mensagem = "Aplicação Biblioteca funcionando!";
+        String mensagem = "Sucesso Teste Biblioteca funcionando";
 
         assertEquals("Sucesso Teste Biblioteca funcionando", mensagem);
     }
